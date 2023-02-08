@@ -1,0 +1,6 @@
+<div class="sa-list">
+    <sa-product-list-item *ngFor="let c of cats"
+                          [cat]="c"
+                          (addToCart)="onAddToCart($event)">
+    </sa-product-list-item>
+</div>

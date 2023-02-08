@@ -1,0 +1,29 @@
+<div *ngIf="cat" class="sa-detail-container">
+    <mat-card class="sa-detail-card sa-bg-color">
+        <mat-card-header class="float-right">
+            <mat-card-title> {{ cat.height | currency: 'EUR' }} </mat-card-title>
+        </mat-card-header>
+        <img mat-card-image
+             class="sa-detail-img"
+             [src]="cat.url"
+             alt="Photo of a Cat">
+        <mat-card-title-group>
+            <mat-card-title>{{ breeds.name }} </mat-card-title>
+            <mat-card-subtitle>Chip: {{ cat.id }} </mat-card-subtitle>
+        </mat-card-title-group>
+        <mat-card-content class="sa-detail-card-content">
+            <mat-card-title>Discription:</mat-card-title>
+            {{ breeds.description }} <br>
+        </mat-card-content>
+        <mat-card-footer class="sa-detail-card-footer">
+            <button mat-raised-button
+                    class="sa-primary-bg-color"
+                    [routerLink]="'/product-list'"
+            >
+                Zurück
+            </button>
+        </mat-card-footer>
+    </mat-card>
+</div>
+
+

@@ -1,0 +1,31 @@
+<mat-toolbar class="sa-primary-bg-color">
+    <button mat-icon-button
+            aria-label="icon-button with menu icon"
+            [matMenuTriggerFor]="menu"
+    >
+        <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item
+                [routerLink]="'/product-list'"
+        >
+            Shop
+        </button>
+        <button mat-menu-item
+                [routerLink]="'/shopping-cart'"
+        >
+            Warenkorb
+        </button>
+    </mat-menu>
+    <span>Cat's Cats Shop</span>
+    <span class="sa-header-spacer"></span>
+    <button mat-icon-button class="" aria-label="icon-button with heart icon">
+        <mat-icon [matBadge]="productQuantity"
+                  matBadgeColor="accent"
+                  [matBadgeHidden]="!productQuantity"
+                  [routerLink]="'/shopping-cart'"
+        >
+            shopping_cart
+        </mat-icon>
+    </button>
+</mat-toolbar>

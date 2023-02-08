@@ -1,0 +1,35 @@
+table {
+  width: 80%;
+  margin: auto;
+}
+
+.sa-table-img {
+  max-height: 100px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.sa-table-header {
+  font-size: 14px;
+}
+
+.center {
+  text-align: center;
+}
+
+.sa-empty-shopping-cart {
+  width: 80%;
+  margin: 10px auto;
+}
+
+.sa-empty-shopping-cart > mat-card-footer {
+  display: flex;
+  justify-content: end;
+  height: 50px;
+}
+
+.sa-empty-shopping-cart > mat-card-footer > button {
+  height: 40px;
+  margin-right: 10px;
+
+}

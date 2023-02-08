@@ -1,0 +1,37 @@
+<ng-container *ngIf="cat">
+    <mat-card class="sa-list-card sa-bg-color">
+        <mat-card-title-group>
+            <mat-card-title>{{ cat.height | currency: 'EUR' }}</mat-card-title>
+            <img mat-card-image
+                 class="sa-list-img"
+                 [src]="cat.url"
+                 alt="Photo of a Cat"
+            >
+        </mat-card-title-group>
+        <mat-card-content *ngFor="let breed of cat.breeds">
+            <p>
+                <b>Rasse:</b> {{ breed.name }}
+            </p>
+            <p>
+                <b>Lebensspanne:</b> {{ breed.life_span }} Jahre
+            </p>
+            <p>
+                <b>Temperament:</b> {{ breed.temperament }}
+            </p>
+        </mat-card-content>
+        <mat-card-footer class="sa-list-card-footer">
+                <button mat-raised-button
+                        class="sa-primary-bg-color"
+                        [routerLink]="cat.id"
+                >
+                    Details
+                </button>
+                <button mat-raised-button
+                        class="sa-primary-bg-color"
+                        (click)="onAddToShoppingCart()"
+                >
+                    In den Warenkorb
+                </button>
+        </mat-card-footer>
+    </mat-card>
+</ng-container>
